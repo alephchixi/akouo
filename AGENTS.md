@@ -22,6 +22,8 @@ It is NOT a generic audio-analysis tool. It is a framework for *how* agents shou
 
 4. **Agents do not hear like humans.** The system does not pretend otherwise.
 
+5. **Public release hygiene governs all edits.** Do not add private paths, unpublished research directories, personal data, local notes, credentials, private recordings, or non-public source maps to the portable release.
+
 ## Repository Structure
 
 ```
@@ -74,6 +76,17 @@ skill-name/
 4. **Maintain epistemic consistency.** The claim taxonomy (`heard`/`measured`/`inferred`/`interpreted`/`speculative`/`undetermined`) must be respected uniformly across all skills.
 5. **Update examples if you change behavior.** Examples are the fastest way for agents to understand a skill.
 6. **Update the README** if you add, remove, or rename skills or commands.
+7. **Keep conceptual refinements portable.** Public theory and generic terminology are fine; private project names, local provenance, and local file paths are not.
+8. **Model claim objects in examples.** Claim lists should show objects with `statement`, `confidence`, and optional `basis`, not bare strings.
+
+## Versioning And Release Workflow
+
+- Current public release baseline: `v0.1`.
+- Conceptually refreshed release: `v0.2`.
+- Use a release branch for v0.2 work and tag the improved commit as `v0.2`.
+- Keep the repository remote unchanged unless explicitly instructed.
+- Use the public GitHub username `emezzzzz` for release commits and tags; do not expose local Git identity or local network email.
+- Do not commit untracked app prototypes, generated outputs, local caches, or private research material into the public portable-skills release.
 
 ## When Adding a New Listening Mode
 
